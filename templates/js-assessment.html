@@ -5,6 +5,7 @@
   <title>Skills JavaScript</title>
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="static/styles.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 <body class="container">
 
@@ -100,7 +101,6 @@ function alertForm(evt){
 }
 colorForm.addEventListener('submit', alertForm);
 colorForm.addEventListener('enter', alertForm);
-
 </script>
 
 <div class="hint">
@@ -134,7 +134,15 @@ colorForm.addEventListener('enter', alertForm);
 
 <script>
   "use strict";
-  // code here for above problem
+  // Change the color of text by using func then adding eventListener.
+  const redText = document.querySelector('#red');
+  function textColorFunction(){
+    // ALT solution:
+    // var red = document.querySelector('.colorChange');
+    // red.style.color = 'red';
+    text = $('.colorChange').css("color", "red");
+  }
+  redText.addEventListener('click', textColorFunction);
 </script>
 
 <!-- /////////////////////////////////////////////////////////////////////// -->
