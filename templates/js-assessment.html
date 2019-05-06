@@ -38,7 +38,26 @@
 <button id='signIn' class='signInText'>Log In</button>
 <script>
   "use strict";
-  // code here for above-problem
+
+/**********************************************************
+ * 1. Setting variable to get the button's element by ID. *
+ * 2. Then adding an Event Listener for any clicks on it. *
+ * 3. If any clicks, run function                         *
+ *********************************************************/
+  const signInText = document.getElementById('signIn').addEventListener("click", buttonFunction);
+
+// Conditional func that changes sign-in text depending on innerHTML. 
+  function buttonFunction(){
+    var signInText = document.getElementById("signIn");
+
+    if (signInText.innerHTML === "Log In"){
+        signInText.innerHTML = "Log Out";
+    }
+    else{
+        signInText.innerHTML = "Log In";
+    }
+  }
+
 </script>
 
 <div class="hint">
@@ -69,6 +88,12 @@
 <script>
   "use strict";
   // code here for above problem
+
+
+
+
+
+  
 </script>
 
 <div class="hint">
