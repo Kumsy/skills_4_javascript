@@ -44,11 +44,11 @@
  * 2. Then adding an Event Listener for any clicks on it. *
  * 3. If any clicks, run function                         *
  *********************************************************/
-  const signInText = document.getElementById('signIn').addEventListener("click", buttonFunction);
+  const signInText = document.querySelector('#signIn').addEventListener("click", buttonFunction);
 
 // Conditional func that changes sign-in text depending on innerHTML. 
   function buttonFunction(){
-    var signInText = document.getElementById("signIn");
+    var signInText = document.querySelector("#signIn");
 
     if (signInText.innerHTML === "Log In"){
         signInText.innerHTML = "Log Out";
@@ -87,13 +87,20 @@
 
 <script>
   "use strict";
-  // code here for above problem
+/******************************************************************
+ * 1. Pop-up alert when user submits form by button or enter key. *
+ * 2. Created a querySelector and function                        *
+ * 3. Event Listener calls function                               *
+ ******************************************************************/
+ 
+const colorForm = document.querySelector('#prevent-form-submission-form');
+function alertForm(evt){
+    alert("Mr. Stark, I don't feel so good.");
+    evt.preventDefault();
+}
+colorForm.addEventListener('submit', alertForm);
+colorForm.addEventListener('enter', alertForm);
 
-
-
-
-
-  
 </script>
 
 <div class="hint">
